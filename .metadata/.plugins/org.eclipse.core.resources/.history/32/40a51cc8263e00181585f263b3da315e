@@ -1,0 +1,59 @@
+package com.JoseK.Testjdbc;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Reader;
+import java.sql.Clob;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+public class TestBlobAndClob {
+
+	public static void main(String[] args) {
+		//测试 CLOB
+		/*try {
+			Connection con = MysqlConUtil.conToMysql();
+			String sql = "insert into testuser (userName,myInfo) values (?,?)";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setObject(1, "小核弹");
+			ps.setCharacterStream(2, new FileReader("e:\\a.txt"));
+			int i = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}*/
+		 try {
+			Clob clob = null;
+			Connection con = MysqlConUtil.conToMysql();
+			String sql = "select * from testuser where id = 7252";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()){
+				clob = rs.getClob("myInfo");	
+			}			
+			Reader r = clob.getCharacterStream();
+			//FileOutputStream fos = new FileOutputStream("e:\\b.txt");
+			FileWriter fw = new FileWriter("e:\\b.txt");
+			int temp = 0;
+			while((temp = r.read()) != -1){
+				fw.write(temp);
+			}
+			fw.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+			
+		}
+		}
+
+}

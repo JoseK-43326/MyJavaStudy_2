@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="13" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="526" key="dialogHeight"/>
+		<item value="1025" key="dialogWidth"/>
+		<list key="textEntries">
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="706" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="728" key="DIALOG_HEIGHT"/>
+		<item value="-83" key="DIALOG_X_ORIGIN"/>
+		<item value="-17" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="FileSystemImportWizard">
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="E:\Eclipse\Z_WorkSpace\A_TankWar0.1\src"/>
+			<item value="E:\学习资料\马士兵JAVA\尚学堂_马士兵_坦克大战项目\TankWar_Video_Course\source\TankWar1.0"/>
+			<item value="E:\Eclipse\Z_WorkSpace\TankWar0.2\src"/>
+			<item value="E:\Eclipse\Z_WorkSpace\TankWar0.1\src"/>
+			<item value="E:\Eclipse\Z_WorkSpace\TankWar\src"/>
+		</list>
+	</section>
+</section>

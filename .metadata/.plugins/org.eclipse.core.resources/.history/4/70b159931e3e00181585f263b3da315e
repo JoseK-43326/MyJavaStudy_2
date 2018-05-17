@@ -1,0 +1,12 @@
+package com.JoseK.Testjdbc;
+
+import java.sql.Connection;
+
+
+public class TestBlobAndClob {
+
+	public static void main(String[] args) {
+		Connection con = MysqlConUtil.conToMysql();
+	}
+
+}

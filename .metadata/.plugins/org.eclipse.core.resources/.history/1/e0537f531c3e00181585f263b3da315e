@@ -1,0 +1,15 @@
+package com.JoseK.Testjdbc;
+
+
+public class MysqlConUtil {
+
+	public void conToMysql(){
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

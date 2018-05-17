@@ -1,0 +1,32 @@
+import java.io.*;
+import java.net.*;
+
+public class ChatServer {
+	
+	public static void main(String[] args) {
+		boolean isConnect = false;
+		try {
+			ServerSocket ss = new ServerSocket(8080);
+			isConnect = true;
+			while(isConnect){
+				boolean isWriting = false;
+				Scoket s = ss.accept();
+				isWriting = true;
+System.out.println("a client connected!");
+				DataInputStream dis = new DataInputStream(s.getInputStream());
+				while(isWriting){
+					String str = dis.readUTF();				
+					System.out.println(str);					
+				}
+				dis.close();
+			}
+		}catch (EOFException e){
+			s.close();
+			System.out.println("client disconnected!");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

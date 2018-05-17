@@ -1,0 +1,40 @@
+package com.JoseK.TestORM;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+public class TestOrm {
+
+	public static void main(String[] args) {
+		
+		Object[] objs = new Object[3]; 
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			con = JDBCUtil.getMySQLConn();
+			String sql = "select * from Emp where id = 1";
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while(rs.next()){
+				objs[0] = rs.getString("Name");
+				objs[1] = rs.getDouble("Salary");
+				objs[2] = rs.getDate("HireDate");
+			}
+			for(Object temp:objs){
+				System.out.println("Name:"+ (String)temp);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			JDBCUtil.close(rs, ps, con);
+		}
+		
+		
+		
+	}
+
+}

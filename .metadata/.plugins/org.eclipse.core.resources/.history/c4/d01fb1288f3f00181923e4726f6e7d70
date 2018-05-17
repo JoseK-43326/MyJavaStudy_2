@@ -1,0 +1,15 @@
+package com.JoseK.TestORM;
+
+import java.sql.Connection;
+
+
+public class JDBCUtil {
+
+	
+	public static Connection getMySQLConn(){
+		
+		//加载驱动
+		
+	}
+	
+}

@@ -1,0 +1,30 @@
+package com.JoseK.Testjdbc;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+public class TestBlobAndClob {
+
+	public static void main(String[] args) {
+		//测试 CLOB
+		/*try {
+			Connection con = MysqlConUtil.conToMysql();
+			String sql = "insert into testuser (userName,myInfo) values (?,?)";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setObject(1, "小核弹");
+			ps.setCharacterStream(2, new FileReader("e:\\a.txt"));
+			int i = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}*/
+		Connection con = MysqlConUtil.conToMysql();
+		con.prepareStatement(sql)
+;	}
+
+}

@@ -1,0 +1,15 @@
+package com.JoseK.Testjdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+
+public class TestBlobAndClob {
+
+	public static void main(String[] args) {
+		//测试 CLOB
+		Connection con = MysqlConUtil.conToMysql();
+		PreparedStatement ps = con.prepareStatement(sql);
+	}
+
+}

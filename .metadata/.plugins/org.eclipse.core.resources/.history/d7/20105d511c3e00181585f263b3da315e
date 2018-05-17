@@ -1,0 +1,11 @@
+package com.JoseK.Testjdbc;
+
+
+public class MysqlConUtil {
+
+	public void conToMysql(){
+		Class.forName("com.mysql.jdbc.Driver");
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.JoseK.Testjdbc;
+
+import java.sql.DriverManager;
+
+
+public class MysqlConUtil {
+
+	public void conToMysql(){
+		try {
+			//加载驱动
+			Class.forName("com.mysql.jdbc.Driver");
+			//建立连接
+			DriverManager.getConnection("")
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

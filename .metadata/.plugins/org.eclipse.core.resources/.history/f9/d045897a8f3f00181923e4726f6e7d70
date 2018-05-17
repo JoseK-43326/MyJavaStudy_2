@@ -1,0 +1,22 @@
+package com.JoseK.TestORM;
+
+import java.sql.Connection;
+
+
+public class JDBCUtil {
+
+	
+	public static Connection getMySQLConn(){
+	
+		try {
+			//加载驱动
+			Class.forName("com.mysql.jdbc.Driver");
+			//建立连接
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+}

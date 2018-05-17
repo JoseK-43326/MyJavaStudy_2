@@ -1,0 +1,36 @@
+package com.JoseK.Testjdbc;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+
+
+public class TestTime {
+
+	
+	public static void main(String[] args) {
+		try {
+			//加载驱动
+			Class.forName("com.mysql.jdbc.Driver");
+			//建立连接
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","fanzhiwei1995921");
+			String sql = "insert into TestUser (userName,passWord,regTime,lastLoginTime) values (?,?,?,?)";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setObject(1, "小核弹");
+			ps.setObject(2, "132456");
+			Date date = new Date(3333);
+			ps.setObject(3, date);
+			Timestamp time = new Timestamp(333;)
+			ps.setObject(4, time);
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

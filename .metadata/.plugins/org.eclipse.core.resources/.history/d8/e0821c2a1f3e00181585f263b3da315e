@@ -1,0 +1,21 @@
+package com.JoseK.Testjdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+
+public class TestBlobAndClob {
+
+	public static void main(String[] args) {
+		//测试 CLOB
+		try {
+			Connection con = MysqlConUtil.conToMysql();
+			PreparedStatement ps = con.prepareStatement("");
+		} catch (SQLException e) {
+			e.printStackTrace();
+			ps.close();
+		}
+	}
+
+}
